@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="orderId" type="xs:string"/>
+                <xs:element name="customerId" type="xs:string"/>
+                <xs:element name="orderDate" type="xs:date"/>
+                <xs:element name="salesOrg" type="xs:string"/>
+                <xs:element name="distributionChannel" type="xs:string"/>
+
+                <xs:element name="items">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="item" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name="itemNo" type="xs:integer"/>
+                                        <xs:element name="materialId" type="xs:string"/>
+                                        <xs:element name="quantity" type="xs:decimal"/>
+                                        <xs:element name="unitPrice" type="xs:decimal"/>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
