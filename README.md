@@ -491,10 +491,25 @@ sap-cpi-ecommerce-sales-order/
 │
 ├── README.md
 │
+├── database/
+│   ├── create-sales-order.sql
+│   └── create-sales-order-item.sql
+│
+├── documentation/
+│   ├── architecture.md
+│   ├── architecture.png
+│   └── test-cases.md
+│
 └── ecom to s4hana/
     └── SAP Integration Suite exported package
 
-The ecom to s4hana directory contains the exported SAP Integration Suite package.
+The database directory contains the HANA Cloud table creation scripts.
+
+The documentation directory contains the integration architecture,
+architecture diagram, and test cases.
+
+The ecom to s4hana directory contains the exported SAP Integration
+Suite package.
 
 🚀 Future Enhancement
 
