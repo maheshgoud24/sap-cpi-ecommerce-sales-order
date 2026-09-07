@@ -1,3 +1,8 @@
+## Architecture
+
+![E-Commerce to SAP Sales Order Integration](documentation/architecture.png)
+
+
 # E-Commerce → SAP CPI → HANA Cloud Sales Order Integration
 
 An end-to-end SAP Cloud Integration (CPI) project that receives sales orders from an e-commerce application, validates the request, checks for duplicate orders, creates the Sales Order header and items in SAP HANA Cloud, and returns the generated Sales Order ID.
