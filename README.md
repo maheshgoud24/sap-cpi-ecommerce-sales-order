@@ -598,6 +598,17 @@ SAP HANA Cloud
 JSON Response
 
 The solution successfully handles both business success scenarios and error/duplicate scenarios.
+## Project Highlights
+
+- Built an end-to-end SAP Cloud Integration (CPI) sales order integration.
+- Implemented JSON-to-XML conversion and XML schema validation.
+- Implemented business validation with structured error handling.
+- Implemented idempotency using an external e-commerce order ID.
+- Implemented duplicate order detection using JDBC and HANA Cloud.
+- Implemented multi-item order processing using JDBC Batch Mode.
+- Used Groovy for complex message processing and JDBC response handling.
+- Implemented HTTP 400 responses for invalid business requests.
+- Designed the solution so the backend can later be replaced with SAP S/4HANA Cloud APIs.
 
 👨‍💻 Author
 
