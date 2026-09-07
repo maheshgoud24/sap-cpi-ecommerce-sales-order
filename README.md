@@ -420,6 +420,32 @@ Actual Response:
 
 Result: ✅ PASS
 
+## Test Results
+
+| Test Scenario | Expected Result | Status |
+|---|---|---|
+| Valid single-item order | Sales order created successfully | ✅ PASS |
+| Valid multi-item order | One header + multiple items created | ✅ PASS |
+| Duplicate order | Existing sales order returned | ✅ PASS |
+| Missing customer ID | HTTP 400 validation error | ✅ PASS |
+| Missing order ID | HTTP 400 validation error | ✅ PASS |
+| Empty items | HTTP 400 validation error | ✅ PASS |
+| Quantity = 0 | HTTP 400 validation error | ✅ PASS |
+| Negative quantity | HTTP 400 validation error | ✅ PASS |
+
+### Multi-Item Validation
+
+A single e-commerce order containing multiple items is processed as **one sales order header with multiple sales order items**.
+
+Example:
+
+```text
+Sales Order
+    │
+    ├── Item 20 → MAT101 → Qty 2
+    │
+    └── Item 30 → MAT102 → Qty 5
+
 Database verification confirmed that only one Sales Order header exists for the external order ID.
 
 🛠️ SAP CPI Components Used
@@ -585,4 +611,4 @@ SAP Integration Suite | SAP CPI | Groovy | JDBC | SAP HANA Cloud | REST | JSON |
 
 
 
-Add complete SAP CPI project documentation
+
